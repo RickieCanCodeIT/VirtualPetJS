@@ -26,20 +26,22 @@ statusEl.innerText = jeremy.getStatus();
 const feedBtn = document.querySelector("#feed");
 feedBtn.addEventListener("click", () => {
     jeremy.feed();
-    jeremy.tick();
     statusEl.innerText = jeremy.getStatus();
 })
 
 const drinkBtn = document.querySelector("#drink");
 drinkBtn.addEventListener("click", () => {
     jeremy.drink();
-    jeremy.tick();
     statusEl.innerText = jeremy.getStatus();
 })
 
 const playBtn = document.querySelector("#play");
 playBtn.addEventListener("click", () => {
     jeremy.play();
-    jeremy.tick();
     statusEl.innerText = jeremy.getStatus();
 })
+
+setInterval(() => {
+    jeremy.tick();
+    statusEl.innerText = jeremy.getStatus();
+}, 1000);
