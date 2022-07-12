@@ -3,6 +3,7 @@ import {
     virtualPet2
 } from "./virtualPetPrototype.js";
 import VirtualPet from "./VirtualPet.js"
+import cat from "./cat.js";
 
 const petNameEl = document.querySelector("#petName");
 const furColorEl = document.querySelector("#furColor");
@@ -89,3 +90,9 @@ nameMap["Alex"] = "Avocado";
 nameMap["Chandan"] = "bananas";
 nameMap[person] = personFruit;
 console.log(nameMap);
+
+const container = document.querySelector(".container");
+const catPic = document.createElement("img");
+catPic.src = cat[0].url;
+console.log(catPic);
+container.appendChild(catPic);
